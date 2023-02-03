@@ -44,7 +44,7 @@ export default function AllRecents() {
       <TitleArea>
         <Title text='Recentes' />
         <Button onPress={() => navigation.goBack()}>
-          <Icon name='arrow-back-outline' />
+          <Icon name='close-outline' />
         </Button>
       </TitleArea>
       <RecentsArea

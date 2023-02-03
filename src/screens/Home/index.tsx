@@ -30,7 +30,7 @@ export default function Home() {
           horizontal
           showsHorizontalScrollIndicator={false}
         >
-          <OperationItem icon='barcode-outline' description='Pagar' route='BilletPayment' />
+          <OperationItem icon='barcode-outline' description='Pagar' route='Payment' />
           <OperationItem icon='caret-up-circle-outline' description='Transferir' route='Transfer' />
           <OperationItem icon='caret-down-circle-outline' description='Depositar' route='Deposit' />
           <OperationItem icon='phone-portrait-outline' description='Recarga de celular' route='MobileRecharge' />

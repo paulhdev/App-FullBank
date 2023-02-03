@@ -36,7 +36,7 @@ export default function TransferDeposit({ route }: ScreenProps) {
       <TitleArea>
         <Title text={type === 'transfer' ? 'Transferência' : 'Depósito'} />
         <Button onPress={() => navigation.goBack()}>
-          <Icon name='arrow-back-outline' />
+          <Icon name='close-outline' />
         </Button>
       </TitleArea>
 
