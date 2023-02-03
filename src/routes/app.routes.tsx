@@ -2,12 +2,14 @@ import { createNativeStackNavigator, NativeStackNavigationProp } from "@react-na
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import Home from '../screens/Home';
-import Receipts from '../screens/Receipts';
+import AllRecents from "../screens/AllRecents";
+import Receipt from '../screens/Receipt';
 
 type StackAppNavigationProps = {
   Drawer: undefined;
   Home: undefined;
-  // Receipts: undefined;
+  AllRecents: undefined;
+  Receipt: undefined;
 };
 
 export type StackAppProps = NativeStackNavigationProp<StackAppNavigationProps>;
@@ -28,7 +30,7 @@ export function DrawerNavigator() {
       }}
     >
       <Drawer.Screen name='Home' component={Home} />
-      <Drawer.Screen name='Receipts' component={Receipts} />
+      <Drawer.Screen name='AllRecents' component={AllRecents} />
     </Drawer.Navigator>
   );
 };
@@ -41,6 +43,8 @@ export default function AppRoutes() {
       }}
     >
       <Stack.Screen name='Drawer' component={DrawerNavigator} />
+      <Stack.Screen name='AllRecents' component={AllRecents} />
+      <Stack.Screen name='Receipt' component={Receipt} />
     </Stack.Navigator>
   );
 };

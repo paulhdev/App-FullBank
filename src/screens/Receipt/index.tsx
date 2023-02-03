@@ -2,7 +2,7 @@ import {
   Container,
 } from './styles';
 
-export default function Receipts() {
+export default function Receipt() {
   return (
     <Container />
   );

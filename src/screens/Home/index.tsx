@@ -1,9 +1,11 @@
 import { TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import Header from '../../components/Header';
 import OperationItem from '../../components/OperationItem';
 import RecentItem from '../../components/RecentItem';
 import Title from '../../components/Title';
+import { StackAppProps } from '../../routes/app.routes';
 
 import {
   Container,
@@ -15,6 +17,9 @@ import {
 } from './styles';
 
 export default function Home() {
+
+  const navigation = useNavigation<StackAppProps>();
+
   return (
     <Container>
       <Header />
@@ -26,7 +31,7 @@ export default function Home() {
           showsHorizontalScrollIndicator={false}
         >
           <OperationItem icon='barcode-outline' description='Pagar' route='BilletPayment' />
-          <OperationItem icon='caret-up-circle-outline' description='Trasferir' route='Transfer' />
+          <OperationItem icon='caret-up-circle-outline' description='Transferir' route='Transfer' />
           <OperationItem icon='caret-down-circle-outline' description='Depositar' route='Deposit' />
           <OperationItem icon='phone-portrait-outline' description='Recarga de celular' route='MobileRecharge' />
           <OperationItem icon='person-add-outline' description='Adicionar contato' route='AddContant' />
@@ -34,7 +39,7 @@ export default function Home() {
 
         <TitleArea>
           <Title text='Recentes' />
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('AllRecents')}>
             <ButtonText>Ver tudo</ButtonText>
           </TouchableOpacity>
         </TitleArea>
