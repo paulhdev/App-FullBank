@@ -18,8 +18,19 @@ export default function OperationItem({ icon, description, route }: OperationIte
 
   const navigation = useNavigation<StackAppProps>();
 
+  const handleScreenNavigation = (routeName: string) => {
+    switch (routeName) {
+      case 'Transfer':
+        return navigation.navigate('TransferDeposit', { type: 'transfer' });
+      case 'Deposit':
+        return navigation.navigate('TransferDeposit', { type: 'deposit' });
+      default:
+        return;
+    };
+  };
+
   return (
-    <Container>
+    <Container onPress={() => handleScreenNavigation(route)}>
       <IconArea>
         <Icon name={icon} />
       </IconArea>

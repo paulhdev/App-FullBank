@@ -30,6 +30,11 @@ export default function AllRecents() {
     { id: '3', type: 'received', value: 15.50 },
     { id: '4', type: 'pay', value: 60 },
     { id: '5', type: 'recharge', value: 12 },
+    { id: '6', type: 'recharge', value: 20 },
+    { id: '7', type: 'received', value: 125 },
+    { id: '8', type: 'pay', value: 25 },
+    { id: '9', type: 'transfer', value: 15 },
+    { id: '10', type: 'pay', value: 59.90 },
   ]);
 
   const renderItem: ListRenderItem<RecentsProps> = ({ item }) => <RecentItem type={item.type} value={item.value} />
