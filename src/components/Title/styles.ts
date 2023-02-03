@@ -12,7 +12,7 @@ export const TitleText = styled.Text`
 `;
 
 export const TitleLine = styled.View`
-  width: 15%;
+  width: 50px;
   height: 3px;
   border-radius: 2px;
   background: ${(props) => props.theme.colors.white};
