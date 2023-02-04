@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
@@ -6,11 +7,6 @@ import {
   TitleArea,
   Button,
   Icon,
-  SquareBalanceArea,
-  SquareOne,
-  SquareTwo,
-  BalanceText,
-  BalanceValue,
   Input,
   InputTextInfo,
   ButtonSend,
@@ -18,8 +14,9 @@ import {
 } from './styles';
 
 import Title from "../../components/Title";
-import { StackAppNavigationProps, StackAppProps } from "../../routes/app.routes";
-import { useState } from "react";
+import CardBalance from "../../components/CardBalance";
+
+import { StackAppNavigationProps } from "../../routes/app.routes";
 
 type ScreenProps = NativeStackScreenProps<StackAppNavigationProps, 'TransferDeposit'>;
 
@@ -40,12 +37,7 @@ export default function TransferDeposit({ route }: ScreenProps) {
         </Button>
       </TitleArea>
 
-      <SquareBalanceArea>
-        <BalanceText>Saldo em conta</BalanceText>
-        <BalanceValue>R$1.597,00</BalanceValue>
-        <SquareOne />
-        <SquareTwo />
-      </SquareBalanceArea>
+      <CardBalance />
 
       <Input
         value={quantity}

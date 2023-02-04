@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import CurrencyInput from 'react-native-currency-input';
+import { BarCodeScanner } from 'expo-barcode-scanner';
 
 export const Container = styled.View`
   flex: 1;
@@ -27,24 +27,14 @@ export const Icon = styled(Ionicons)`
   color: ${(props) => props.theme.colors.white};
 `;
 
-export const Input = styled(CurrencyInput)`
-  min-width: 250px;
+export const BarCodeScannerArea = styled(BarCodeScanner)`
   width: 100%;
-  font-family: ${(props) => props.theme.fonts.bold};
-  color: ${(props) => props.theme.colors.white};
-  text-align: center;
-  font-size: 50px;
-  border-radius: 15px;
-  margin: 10px 0;
+  height: 450px;
+  border-width: 1px;
+  margin: 30px 0;
 `;
 
-export const InputTextInfo = styled.Text`
-  font-size: 14px;
-  font-family: ${(props) => props.theme.fonts.regular};
-  color: ${(props) => props.theme.colors.grayPrimary};
-`;
-
-export const ButtonSend = styled.TouchableOpacity`
+export const ButtonBarCodeNumber = styled.TouchableOpacity`
   width: 100%;
   padding: 10px;
   border-radius: 7px;
@@ -55,7 +45,7 @@ export const ButtonSend = styled.TouchableOpacity`
   bottom: 5%;
 `;
 
-export const ButtonSendText = styled.Text`
+export const ButtonBarCodeNumberText = styled.Text`
   font-size: 20px;
   font-family: ${(props) => props.theme.fonts.medium};
   color: ${(props) => props.theme.colors.white};

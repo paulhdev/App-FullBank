@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { BarCodeScanner } from 'expo-barcode-scanner';
 
 export const Container = styled.View`
   flex: 1;
@@ -27,14 +26,37 @@ export const Icon = styled(Ionicons)`
   color: ${(props) => props.theme.colors.white};
 `;
 
-export const BarCodeScannerArea = styled(BarCodeScanner)`
-  width: 100%;
-  height: 450px;
-  border-width: 1px;
-  margin: 30px 0;
+export const BarCodeInfoText = styled.Text`
+  font-size: 14px;
+  font-family: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.grayPrimary};
+  align-self: flex-start;
+  margin-top: 30px;
 `;
 
-export const ButtonBarCodeNumber = styled.TouchableOpacity`
+export const BarCodeInfoNumber = styled.Text`
+  font-size: 14px;
+  font-family: ${(props) => props.theme.fonts.medium};
+  color: ${(props) => props.theme.colors.white};
+  align-self: flex-start;
+`;
+
+export const ValueInfoText = styled.Text`
+  font-size: 14px;
+  font-family: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.grayPrimary};
+  align-self: flex-start;
+  margin-top: 30px;
+`;
+
+export const ValuePayment = styled.Text`
+  font-size: 24px;
+  font-family: ${(props) => props.theme.fonts.bold};
+  color: ${(props) => props.theme.colors.white};
+  align-self: flex-start;
+`;
+
+export const ButtonPayment = styled.TouchableOpacity`
   width: 100%;
   padding: 10px;
   border-radius: 7px;
@@ -45,7 +67,7 @@ export const ButtonBarCodeNumber = styled.TouchableOpacity`
   bottom: 5%;
 `;
 
-export const ButtonBarCodeNumberText = styled.Text`
+export const ButtonPaymentText = styled.Text`
   font-size: 20px;
   font-family: ${(props) => props.theme.fonts.medium};
   color: ${(props) => props.theme.colors.white};

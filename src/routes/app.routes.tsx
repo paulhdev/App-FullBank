@@ -4,6 +4,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from '../screens/Home';
 import AllRecents from "../screens/AllRecents";
 import TransferDeposit from "../screens/TransferDeposit";
+import Scanner from "../screens/Scanner";
 import NewPayment from "../screens/NewPayment";
 import Receipt from '../screens/Receipt';
 
@@ -12,6 +13,7 @@ export type StackAppNavigationProps = {
   Home: undefined;
   AllRecents: undefined;
   TransferDeposit: { type: 'transfer' | 'deposit' };
+  Scanner: undefined;
   NewPayment: undefined;
   Receipt: undefined;
 };
@@ -56,6 +58,7 @@ export default function AppRoutes() {
       <Stack.Screen name='Drawer' component={DrawerNavigator} />
       <Stack.Screen name='AllRecents' component={AllRecents} />
       <Stack.Screen name='TransferDeposit' component={TransferDeposit} />
+      <Stack.Screen name='Scanner' component={Scanner} />
       <Stack.Screen name='NewPayment' component={NewPayment} />
       <Stack.Screen name='Receipt' component={Receipt} />
     </Stack.Navigator>
