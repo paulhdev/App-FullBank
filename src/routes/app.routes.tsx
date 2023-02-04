@@ -6,6 +6,7 @@ import AllRecents from "../screens/AllRecents";
 import TransferDeposit from "../screens/TransferDeposit";
 import Scanner from "../screens/Scanner";
 import NewPayment from "../screens/NewPayment";
+import PhoneRecharge from "../screens/PhoneRecharge";
 import Receipt from '../screens/Receipt';
 
 export type StackAppNavigationProps = {
@@ -15,6 +16,7 @@ export type StackAppNavigationProps = {
   TransferDeposit: { type: 'transfer' | 'deposit' };
   Scanner: undefined;
   NewPayment: undefined;
+  PhoneRecharge: undefined;
   Receipt: undefined;
 };
 
@@ -60,6 +62,7 @@ export default function AppRoutes() {
       <Stack.Screen name='TransferDeposit' component={TransferDeposit} />
       <Stack.Screen name='Scanner' component={Scanner} />
       <Stack.Screen name='NewPayment' component={NewPayment} />
+      <Stack.Screen name='PhoneRecharge' component={PhoneRecharge} />
       <Stack.Screen name='Receipt' component={Receipt} />
     </Stack.Navigator>
   );

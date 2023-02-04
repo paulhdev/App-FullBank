@@ -33,7 +33,7 @@ export default function Home() {
           <OperationItem icon='barcode-outline' description='Pagar' route='Scanner' />
           <OperationItem icon='caret-up-circle-outline' description='Transferir' route='Transfer' />
           <OperationItem icon='caret-down-circle-outline' description='Depositar' route='Deposit' />
-          <OperationItem icon='phone-portrait-outline' description='Recarga de celular' route='MobileRecharge' />
+          <OperationItem icon='phone-portrait-outline' description='Recarga de celular' route='PhoneRecharge' />
           <OperationItem icon='person-add-outline' description='Adicionar contato' route='AddContant' />
         </OperationsArea>
 

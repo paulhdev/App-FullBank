@@ -26,6 +26,8 @@ export default function OperationItem({ icon, description, route }: OperationIte
         return navigation.navigate('TransferDeposit', { type: 'deposit' });
       case 'Scanner':
         return navigation.navigate('Scanner');
+      case 'PhoneRecharge':
+        return navigation.navigate('PhoneRecharge');
       default:
         return;
     };
